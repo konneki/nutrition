@@ -6,11 +6,11 @@ const Recipes = ({ title, calories, image, ingredients }) => {
       <h1>{title}</h1>
       <p>Calories: {Math.floor(calories)}</p>
       <p>Ingredients:</p>
-      <ul className="Recipes-list">
+      <ol className="Recipes-list">
         {ingredients.map((ingredient) => (
           <li>{ingredient.text}</li>
         ))}
-      </ul>
+      </ol>
       <img className="Recipes-image" src={image} alt={title} />
     </div>
   );
