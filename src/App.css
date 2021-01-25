@@ -1,3 +1,31 @@
 .App {
-  display: block;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0 0 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  width: 80vw;
+}
+
+.Recipes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Recipes-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 10%;
+}
+
+.Recipes-list {
+  list-style-type: none;
+  line-height: 30px;
 }

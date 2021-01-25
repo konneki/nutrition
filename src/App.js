@@ -16,6 +16,7 @@ const App = () => {
     );
     const data = await response.json();
     setRecipes(data.hits);
+    console.log(data.hits);
   };
 
   useEffect(() => {
@@ -45,14 +46,17 @@ const App = () => {
           Search
         </button>
       </form>
-      {recipes.map((result) => (
-        <Recipes
-          key={result.recipe.label}
-          title={result.recipe.label}
-          calories={result.recipe.calories}
-          image={result.recipe.image}
-        />
-      ))}
+      <div className="container">
+        {recipes.map((result) => (
+          <Recipes
+            key={result.recipe.label}
+            title={result.recipe.label}
+            calories={result.recipe.calories}
+            ingredients={result.recipe.ingredients}
+            image={result.recipe.image}
+          />
+        ))}
+      </div>
     </div>
   );
 };
